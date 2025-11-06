@@ -60,3 +60,21 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
+
+# macOS
+.DS_Store
+
+# Build artifacts
+DerivedData/
+build/
+*.xcarchive
+
+# Xcode workspace
+*.xcworkspace
+!*.xcworkspace/contents.xcworkspacedata
+!*.xcworkspace/xcshareddata
+
+# Temporary files
+*.swp
+*~.nib
+*.moved-aside
