@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Domain Tracker</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Domain Tracker</h1>
+      <button id="clearBtn" class="clear-btn">Clear</button>
+    </div>
+    
+    <div id="content">
+      <div id="loading" class="loading">Loading...</div>
+      <div id="noDomains" class="no-domains" style="display: none;">
+        No domains detected yet. Refresh the page or navigate to start tracking.
+      </div>
+      <div id="domainList" class="domain-list" style="display: none;"></div>
+    </div>
+    
+    <div class="footer">
+      <div id="count" class="count"></div>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
