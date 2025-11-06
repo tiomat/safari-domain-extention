@@ -18,6 +18,7 @@
 		AA9999999999999999999991 /* popup.css in Resources */ = {isa = PBXBuildFile; fileRef = AA9999999999999999999990 /* popup.css */; };
 		AAAAAAAAAAAAAAAAAAAAAA1 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = AAAAAAAAAAAAAAAAAAAAAA0 /* manifest.json */; };
 		AABBBBBBBBBBBBBBBBBBBB1 /* images in Resources */ = {isa = PBXBuildFile; fileRef = AABBBBBBBBBBBBBBBBBBBB0 /* images */; };
+		AACCCCCCCCCCCCCCCCCCCC0 /* Domain Tracker Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = AAEEEEEEEEEEEEEEEEEEEE0 /* Domain Tracker Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				AACCCCCCCCCCCCCCCCCCCC0 /* Domain Tracker Extension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
