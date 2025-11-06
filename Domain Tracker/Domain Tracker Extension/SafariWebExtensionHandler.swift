@@ -3,12 +3,19 @@ import SafariServices
 class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
     
     func beginRequest(with context: NSExtensionContext) {
-        let item = context.inputItems[0] as! NSExtensionItem
+        guard let item = context.inputItems.first as? NSExtensionItem else {
+            NSLog("No input items in extension context")
+            context.completeRequest(returningItems: [], completionHandler: nil)
+            return
+        }
+        
         let message = item.userInfo?[SFExtensionMessageKey]
-        NSLog("Received message from browser.runtime.sendNativeMessage: %@", message as! CVarArg)
+        if let message = message {
+            NSLog("Received message from browser.runtime.sendNativeMessage: %@", String(describing: message))
+        }
         
         let response = NSExtensionItem()
-        response.userInfo = [ SFExtensionMessageKey: [ "Response to": message ] ]
+        response.userInfo = [ SFExtensionMessageKey: [ "Response to": message ?? "no message" ] ]
         
         context.completeRequest(returningItems: [response], completionHandler: nil)
     }
