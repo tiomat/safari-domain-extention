@@ -18,7 +18,7 @@
 		AA9999999999999999999991 /* popup.css in Resources */ = {isa = PBXBuildFile; fileRef = AA9999999999999999999990 /* popup.css */; };
 		AAAAAAAAAAAAAAAAAAAAAA1 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = AAAAAAAAAAAAAAAAAAAAAA0 /* manifest.json */; };
 		AABBBBBBBBBBBBBBBBBBBB1 /* images in Resources */ = {isa = PBXBuildFile; fileRef = AABBBBBBBBBBBBBBBBBBBB0 /* images */; };
-		AACCCCCCCCCCCCCCCCCCCC0 /* Domain Tracker Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = AAEEEEEEEEEEEEEEEEEEEE0 /* Domain Tracker Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy ); }; };
+		AACCCCCCCCCCCCCCCCCCCC0 /* Domain Tracker Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = AAEEEEEEEEEEEEEEEEEEEE0 /* Domain Tracker Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,13 +26,13 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = AADDDDDDDDDDDDDDDDDDDD0 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = AAEEEEEEEEEEEEEEEEEEEE0;
+			remoteGlobalIDString = AAEEEEEEEEEEEEEEEEEEEE2;
 			remoteInfo = "Domain Tracker Extension";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		AAFFFFFFFFFFFFFFFFFFFFFFF1 /* Embed Foundation Extensions */ = {
+		AAFFFFFFFFFFFFFFFFFFFFFF1 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
@@ -138,7 +138,7 @@
 				AA0000000000000000000004 /* Sources */,
 				AA0000000000000000000001 /* Frameworks */,
 				AA0000000000000000000005 /* Resources */,
-				AAFFFFFFFFFFFFFFFFFFFFFFF1 /* Embed Foundation Extensions */,
+				AAFFFFFFFFFFFFFFFFFFFFFF1 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
