@@ -4,8 +4,25 @@ import SafariServices
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
     
+    var window: NSWindow!
+    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Check if Safari extension is enabled
+        // Create window programmatically
+        window = NSWindow(
+            contentRect: NSRect(x: 0, y: 0, width: 480, height: 270),
+            styleMask: [.titled, .closable, .miniaturizable],
+            backing: .buffered,
+            defer: false
+        )
+        window.center()
+        window.title = "Domain Tracker"
+        window.makeKeyAndOrderFront(nil)
+        
+        // Set up view controller
+        let viewController = ViewController()
+        window.contentViewController = viewController
+        
+        // Check Safari extension status
         SFSafariExtensionManager.getStateOfSafariExtension(withIdentifier: "com.example.Domain-Tracker.Extension") { (state, error) in
             guard let state = state, error == nil else {
                 return

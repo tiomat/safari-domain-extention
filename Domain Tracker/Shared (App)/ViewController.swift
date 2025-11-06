@@ -3,17 +3,49 @@ import SafariServices
 
 class ViewController: NSViewController {
     
-    @IBOutlet weak var appNameLabel: NSTextField!
-    @IBOutlet weak var statusLabel: NSTextField!
-    @IBOutlet weak var openSafariButton: NSButton!
+    private var appNameLabel: NSTextField!
+    private var statusLabel: NSTextField!
+    private var openSafariButton: NSButton!
+    private var descriptionLabel: NSTextField!
+    
+    override func loadView() {
+        // Create the main view
+        let view = NSView(frame: NSRect(x: 0, y: 0, width: 480, height: 270))
+        self.view = view
+        
+        // App Name Label
+        appNameLabel = NSTextField(labelWithString: "Domain Tracker")
+        appNameLabel.font = NSFont.boldSystemFont(ofSize: 30)
+        appNameLabel.frame = NSRect(x: 136, y: 208, width: 209, height: 37)
+        view.addSubview(appNameLabel)
+        
+        // Status Label
+        statusLabel = NSTextField(labelWithString: "Checking extension status...")
+        statusLabel.font = NSFont.systemFont(ofSize: 14)
+        statusLabel.textColor = NSColor.secondaryLabelColor
+        statusLabel.frame = NSRect(x: 68, y: 158, width: 345, height: 32)
+        statusLabel.lineBreakMode = .byWordWrapping
+        view.addSubview(statusLabel)
+        
+        // Open Safari Button
+        openSafariButton = NSButton(frame: NSRect(x: 130, y: 82, width: 221, height: 32))
+        openSafariButton.title = "Open Safari Preferences"
+        openSafariButton.bezelStyle = .rounded
+        openSafariButton.target = self
+        openSafariButton.action = #selector(openSafariExtensionPreferences(_:))
+        view.addSubview(openSafariButton)
+        
+        // Description Label
+        descriptionLabel = NSTextField(labelWithString: "Domain Tracker shows all domains that a webpage sends requests to. Click the extension icon in Safari toolbar to see the list.")
+        descriptionLabel.font = NSFont.systemFont(ofSize: 12)
+        descriptionLabel.textColor = NSColor.secondaryLabelColor
+        descriptionLabel.frame = NSRect(x: 48, y: 20, width: 385, height: 48)
+        descriptionLabel.lineBreakMode = .byWordWrapping
+        view.addSubview(descriptionLabel)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Set app name
-        if let appNameLabel = appNameLabel {
-            appNameLabel.stringValue = "Domain Tracker"
-        }
         
         // Check extension status
         updateExtensionStatus()
@@ -36,7 +68,7 @@ class ViewController: NSViewController {
         }
     }
     
-    @IBAction func openSafariExtensionPreferences(_ sender: Any) {
+    @objc func openSafariExtensionPreferences(_ sender: Any) {
         SFSafariApplication.showPreferencesForExtension(withIdentifier: "com.example.Domain-Tracker.Extension") { error in
             if let error = error {
                 print("Error opening Safari preferences: \(error.localizedDescription)")

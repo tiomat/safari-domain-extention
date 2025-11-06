@@ -10,6 +10,7 @@
 		AA1111111111111111111111 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1111111111111111111110 /* AppDelegate.swift */; };
 		AA2222222222222222222221 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2222222222222222222220 /* ViewController.swift */; };
 		AA3333333333333333333331 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA3333333333333333333330 /* Assets.xcassets */; };
+		AA4444444444444444444441 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA4444444444444444444440 /* Main.storyboard */; };
 		AA5555555555555555555551 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5555555555555555555550 /* SafariWebExtensionHandler.swift */; };
 		AA6666666666666666666661 /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = AA6666666666666666666660 /* background.js */; };
 		AA7777777777777777777771 /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = AA7777777777777777777770 /* popup.html */; };
@@ -49,6 +50,7 @@
 		AA1111111111111111111110 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA2222222222222222222220 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AA3333333333333333333330 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AA4444444444444444444440 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		AA4444444444444444444450 /* Domain_Tracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Domain_Tracker.entitlements; sourceTree = "<group>"; };
 		AA5555555555555555555550 /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
 		AA5555555555555555555560 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				AA1111111111111111111110 /* AppDelegate.swift */,
 				AA2222222222222222222220 /* ViewController.swift */,
 				AA3333333333333333333330 /* Assets.xcassets */,
+				AA4444444444444444444440 /* Main.storyboard */,
 				AA4444444444444444444450 /* Domain_Tracker.entitlements */,
 			);
 			path = "Shared (App)";
@@ -207,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA3333333333333333333331 /* Assets.xcassets in Resources */,
+				AA4444444444444444444441 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,7 +264,6 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Shared (App)/Domain_Tracker.entitlements";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -270,7 +273,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "Domain Tracker";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSMainStoryboardFile = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -295,7 +298,6 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Shared (App)/Domain_Tracker.entitlements";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -305,7 +307,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "Domain Tracker";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSMainStoryboardFile = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
